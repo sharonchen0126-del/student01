@@ -1,30 +1,34 @@
-# student01
-## 會員登入系統
-### 會員登入統合
-#### 會員登入
-##### 會員登入細目
-###### 會員登入重點
+# 🛒 Global Retail Expert System (全球零售專家系統)
 
-介紹會員細目以及使用規則，將會員資料導入<hr>
-導入匯出以及後台執行規則<hr>
-爾後後台人員如何修改資料
-<hr>
-系統維修人員使用規則<br>
+這是一個基於 **Java Swing** 開發的桌面零售管理系統，整合了資料庫 (MySQL) 進行商品管理、顧客購物車邏輯以及專業的訂單列印功能。
 
-[google](http://www.google.com)
+## 🌟 核心功能
+*   **安全登入系統**：具備顧客註冊與登入驗證功能。
+*   **雙表格購物車**：
+    *   **商品目錄**：即時從資料庫載入最新商品清單。
+    *   **動態購物車**：顧客可選擇商品數量並即時計算總金額。
+*   **後台管理**：管理員可直接在介面進行商品的新增、修改與刪除。
+*   **即時資訊**：視窗上方具備每秒更新的系統時間標籤。
+*   **專業收據列印**：整合 `JTable.print` 功能，結帳後可直接輸出 A4 格式的銷售收據。
+*   **資料持久化**：使用 JDBC 連接 MySQL，確保所有訂單與商品資料永久保存。
 
-[yahoo](http://tw.yahoo.com)
+## 🛠 使用技術
+*   **語言**: Java 11+
+*   **介面**: Java Swing / AWT
+*   **資料庫**: MySQL 8.0
+*   **驅動**: MySQL Connector/J (JDBC)
+*   **工具**: Eclipse IDE / Maven
 
-[練習](exam.txt)
+## 📋 資料庫結構 (SQL)
+本專案需要建立 `shop_db` 資料庫，並包含以下表格：
+*   `products`: 存放商品 ID、名稱、價格。
+*   `users`: 存放使用者帳號與密碼。
+*   `orders`: 存放歷史成交紀錄。
 
-[school技術文件](doc/index.html)
+## 📸 介面展示
+*(您可以在這裡放上您的執行截圖)*
 
-[講義](doc/6_JavaEEApplication.pdf)
-
-
-
-
-![咖啡](pic/c.jpg?raw=true)
-
-[demo](https://youtu.be/CLaIwJRqCFs?si=00YzNWN9OwMUMx7K)
-
+## 🚀 如何執行
+1. 確保已安裝 MySQL 並執行專案提供的 SQL 指令。
+2. 修改 `Dao.java` 中的資料庫帳號與密碼。
+3. 執行 `LoginWin.java` 啟動登入視窗。
